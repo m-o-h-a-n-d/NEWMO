@@ -20,7 +20,7 @@ class ImageFactory extends Factory
         return [
             'path' => fake()->randomElement([
                 'images/news-350x223-1.jpg',
-                'images/news-350x223-2.jpg',
+
                 'images/news-350x223-3.jpg',
                 'images/news-350x223-4.jpg',
                 'images/news-350x223-5.jpg',

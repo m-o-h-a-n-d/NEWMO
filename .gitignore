@@ -1,3 +1,4 @@
+# Laravel الافتراضي
 /.phpunit.cache
 /node_modules
 /public/build
@@ -14,6 +15,19 @@ Homestead.yaml
 auth.json
 npm-debug.log
 yarn-error.log
+
+# أدوات التطوير
 /.fleet
 /.idea
 /.vscode
+
+# Meilisearch Cache (مهم جداً)
+data.ms/
+
+# ملفات الصور المرفوعة (لو مش عايز ترفعها على GitHub)
+public/uploads/posts/
+public/uploads/users/
+public/uploads/settings/
+
+# Log Files
+storage/logs/*.log

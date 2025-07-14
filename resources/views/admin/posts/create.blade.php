@@ -33,12 +33,23 @@
 
 
                                     {{-- small_desc --}}
-                                    <textarea type="text" id="title" class="form-control mb-2" name="title" placeholder="Title"
-                                        required></textarea>
+                                    <textarea type="text" id="title" class="form-control mb-2" name="title" placeholder="Title" required></textarea>
+                                    <textarea type="text" id="small_desc" class="form-control mb-2" name="small_desc" placeholder="Small Description"></textarea>
+
+
+                                    <!-- Post Content -->
+                                    <textarea id="postContent" class="form-control mb-2" name="description" rows="3"
+                                        placeholder="What's on your mind?"></textarea>
+
+
+                                    <!-- Image Upload -->
+                                    <input type="file" id="postImage" name="image[]" class="form-control mb-2"
+                                        accept="image/*" multiple />
 
                                     <div class="tn-slider mb-2">
                                         <div id="imagePreview" class="slick-slider"></div>
                                     </div>
+
 
 
                                     <!-- status  -->
@@ -50,6 +61,14 @@
                                                     <option value="" selected>Select Status</option>
                                                     <option value="0">Not Available</option>
                                                     <option value="1">Active</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 mt-3">
+                                                <select id="postCategory" name="category_id" class="form-control mb-2">
+                                                    <option value="" selected>Select Category</option>
+                                                    @foreach ($categories as $category)
+                                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
 
@@ -103,8 +122,6 @@
                 maxFileCount: 7,
                 showUpload: false,
             });
-
-
             $('#postContent').summernote({
                 height: 300,
             });

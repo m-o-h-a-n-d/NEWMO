@@ -37,7 +37,7 @@ class PostController extends Controller
         if ($query) {
             $posts = Post::search($query); // Meilisearch
         }
-        $posts = $posts->get();
+        $posts = $posts->latest()->get();
 
         return view('admin.posts.index', compact('posts', 'query'));
     }

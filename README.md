@@ -1,7 +1,7 @@
 from pathlib import Path
 
 readme_content = """
-# 📰 Laravel News Dashboard (with Redis & Meilisearch)
+# 📰 Laravel News Project And Control Dashboard Admin
 
 This is a Laravel-powered content management system with advanced features like real-time notifications, Redis-based caching, Meilisearch search engine, authorization control, and full support for SEO.
 
